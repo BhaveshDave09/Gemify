@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+/* Direct embedded @font-face definitions for Google Sans */
+@font-face {
+  font-family: 'Google Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Google Sans Regular'), local('GoogleSans-Regular'),
+       url('https://fonts.gstatic.com/s/googlesans/v58/4UaGrENHsxJlGDuGo1OIlL3Kwp5MKg.woff2') format('woff2'),
+       url('https://fonts.cdnfonts.com/s/14884/GoogleSans-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Google Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Google Sans Medium'), local('GoogleSans-Medium'),
+       url('https://fonts.gstatic.com/s/googlesans/v58/4UabrENHsxJlGDuGo1OIlLU94Yt3CwZ-Pw.woff2') format('woff2'),
+       url('https://fonts.cdnfonts.com/s/14884/GoogleSans-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Google Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Google Sans Bold'), local('GoogleSans-Bold'),
+       url('https://fonts.gstatic.com/s/googlesans/v58/4UabrENHsxJlGDuGo1OIlL3N44t3CwZ-Pw.woff2') format('woff2'),
+       url('https://fonts.cdnfonts.com/s/14884/GoogleSans-Bold.woff') format('woff');
+}
+
+@layer base {
+  *, ::before, ::after {
+    font-family: 'Google Sans', 'Product Sans', 'Noto Sans Devanagari', 'Noto Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: 'Google Sans', 'Product Sans', 'Noto Sans Devanagari', 'Noto Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-size: 14px;
+    letter-spacing: -0.012em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  html.font-scale-compact {
+    font-size: 13px;
+  }
+
+  html.font-scale-normal {
+    font-size: 14px;
+  }
+
+  html.font-scale-large {
+    font-size: 15.5px;
+  }
+
+  html.font-scale-larger {
+    font-size: 17px;
+  }
+
+  body {
+    font-family: 'Google Sans', 'Product Sans', 'Noto Sans Devanagari', 'Noto Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    color: #1e293b;
+    background-color: #f8fafc;
+    line-height: 1.5;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6, p, span, a, button, input, select, textarea, label, td, th, div {
+    font-family: 'Google Sans', 'Product Sans', 'Noto Sans Devanagari', 'Noto Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    overflow-wrap: break-word;
+  }
+
+  button, input, select, textarea {
+    font-size: inherit;
+  }
+
+  select {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23475569' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e") !important;
+    background-position: right 0.5rem center !important;
+    background-repeat: no-repeat !important;
+    background-size: 1.25em 1.25em !important;
+    padding-right: 1.85rem !important;
+  }
+
+  select::-ms-expand {
+    display: none !important;
+  }
+}
+
+/* Modal and container viewport formatting */
+.modal-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(0.75rem, 2vw, 1.5rem);
+  width: 100vw;
+  height: 100vh;
+}
+
+.modal-content-container {
+  max-height: min(90vh, 800px);
+  width: 100%;
+}
+
+/* Print styles for Official GeM Evaluation Report */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-evaluation-report, #printable-evaluation-report * {
+    visibility: visible;
+  }
+  #printable-evaluation-report {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    background: white;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* Custom scrollbar for data tables */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

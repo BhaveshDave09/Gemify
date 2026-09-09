@@ -1,0 +1,8 @@
+{
+  "name": "Gemify AI Verification Platform",
+  "description": "AI-powered integrated bid compliance verification system for GeM procurement cross-referencing Udyam, GSTN, PAN, MCA21, EPFO, DigiLocker, and blacklisting portals with automated risk scoring and immutable audit trails.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
